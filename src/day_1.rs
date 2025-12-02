@@ -33,8 +33,15 @@ mod tests {
         let r = Runfiles::create().unwrap();
         let path =
             rlocation!(r, "_main/src/day_1_input_simple.txt").expect("Failed to locate runfile");
-        println!("{path:?}");
         assert!(get_password(&path).is_ok());
         assert_eq!(get_password(&path).unwrap(), 3);
+    }
+
+    #[test]
+    fn test() {
+        let r = Runfiles::create().unwrap();
+        let path = rlocation!(r, "_main/src/day_1_input.txt").expect("Failed to locate runfile");
+        assert!(get_password(&path).is_ok());
+        assert_eq!(get_password(&path).unwrap(), 1055);
     }
 }

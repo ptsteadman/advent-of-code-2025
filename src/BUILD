@@ -16,7 +16,10 @@ rust_library(
 rust_test(
     name = "day_1_test",
     crate = ":day_1_lib",
-    data = ["day_1_input_simple.txt"],
+    data = [
+        "day_1_input.txt",
+        "day_1_input_simple.txt",
+    ],
     visibility = ["//visibility:public"],
     deps = [
         ":day_1_lib",
