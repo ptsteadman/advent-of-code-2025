@@ -27,6 +27,6 @@ use_repo(multitool, "multitool")
 # Support for Rust, see https://github.com/bazelbuild/rules_rust
 rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
 rust.toolchain(
-    edition = "2021",
-    versions = ["1.75.0"],
+    edition = "2024",
+    versions = ["1.85.0"],
 )
