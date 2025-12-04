@@ -19,5 +19,13 @@
         "--experimental_use_code_flow_analysis",
         "--experimental_enable_label_completions"
     ],
-
+    "rust-analyzer": {
+        "workspace": {
+            "discoverConfig": {
+                "command": ["${workspaceFolder}/discover_bazel_rust_project.sh"],
+                "progressLabel": "rust_analyzer",
+                "filesToWatch": ["BUILD", "BUILD.bazel", "MODULE.bazel"]
+            }
+        }
+    }
 }
